@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-color:white;
+    --secondary-color:rgb(172, 26, 172);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    padding-top:10px;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.designArea{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: relative;
+}
+
+.designSec{
+    width: 20%;
+    display:flex;
+    height : 70px;
+    background-color: var(--secondary-color);
+    position:absolute;
+    z-index: -1;
+}
+
+.designSecRight{
+    right: 0;
+    justify-content: start;
+}
+
+.designSecLeft{
+    left: 0;
+    justify-content: end;
+}
+
+.triangle{
+    width: 0;
+	height: 0;
+	border-top: 35px solid transparent;
+	border-bottom: 35px solid transparent;
+}
+
+.triangleRight {
+	border-left: 70px solid white;
+}
+
+.triangleLeft {
+	border-right: 70px solid white;
+}
+
+.header{
+    width: 90%;
+    height: auto;
+    margin: 20px auto 20px;
+    text-align: center;
+    padding:10px 0 0;
+}
+
+
+.header p{
+    width: 50%;
+    margin : 20px auto 0;
+}
+
+.line {
+    width: 50%;
+    margin:0 auto 10px;
+    height:3px;
+    background:
+      repeating-linear-gradient(90deg,purple 0 5px,#0000 0 7px)
+  }
+
+.main{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    padding: 1px 0;
+}
+
+.mainHeading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section{
+    min-height: 60vh;
+    width: 90%;
+    margin:20px auto;
+    text-align: center;
+    /* padding: 20px 0; */
+}
+
+.sectionHeading{
+    margin:auto;
+    padding: 5px 20px;
+    color: var(--primary-color);
+    width:max-content;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    justify-content: center;
+    z-index: 1;
+}
+
+.sectionHeading h1{
+    font-size:1.5rem;
+}
+
+
+#topTier{
+    width: 95%;
+    height:auto;
+    display: flex;
+    margin:20px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.row{
+    width: 95%;
+    height:auto;
+    display: flex;
+    margin:20px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#topTier .memberBlocks{
+    margin: 20px 10%;
+}
+
+.memberBlocks{
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    padding:0 0 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: transform .5s ease, box-shadow .5s ease, background-color .7s ease;
+}
+
+.memberBlocks:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px grey;
+    background-color: aliceblue;
+}
+
+.profileCircle{
+    margin: 5px;
+    width: 190px;
+    height: 190px;
+    border-radius:50%;
+}
+
+.info p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info span{
+    font-weight: 400;
+    color: purple;
+}
+
+img{
+    height: 190px;
+    width: 190px;
+}
+
+.noDisplay{
+    display: none;
+}
+
+@media (max-width:500px){
+    .designArea{
+        height: 50px;
+    }
+
+    .header p{
+        width: 65%;
+        margin : 20px auto 0;
+    }
+    
+    .designSec{
+        width: 12%;
+        height: 50px;
+    }
+
+    .triangle{
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+    }
+    
+    .triangleRight {
+        border-left: 20px solid white;
+    }
+    
+    .triangleLeft {
+        border-right: 20px solid white;
+    }
+
+
+    .sectionHeading{
+        margin:10px auto;
+        padding: 5px 10p;
+        color: var(--primary-color);
+        width:max-content;
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .sectionHeading h1{
+        font-size:1.2rem;
+    }
+}
+
+@media (max-width:400px){
+    .noDisplay{
+        margin-top: 40%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: black;
+    }
+    .line{
+        display: none;
+    }
+    .main{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+    .designArea{
+        display: none;
+    }
+    
+}
